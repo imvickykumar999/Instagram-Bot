@@ -8,10 +8,11 @@ from instabot import Bot
 import getpass
 bot = Bot()
 
-user = '_____.___alone___._____'
-passwd = getpass.getpass('Enter Password : ')
+user = ['_____.___alone___._____',
+		 'vix.bot', 'jaswani.garima']
 
-bot.login(username=user, password=passwd)
+passwd = getpass.getpass('Enter Password : ')
+bot.login(username = user[2], password = passwd)
 
 message = '''
 Hello friend.
@@ -24,3 +25,9 @@ def sendmessage():
 	bot.send_message(message, send_to)
 	
 sendmessage()
+
+try:
+	import shutil
+	shutil.rmtree('config')
+except:
+	pass
