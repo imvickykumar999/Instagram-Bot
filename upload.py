@@ -8,9 +8,9 @@ from instabot import Bot
 import getpass
 bot = Bot()
 
-user = ['_____.___alone___._____', 'vix.bot']
+user = 'vix.bot'
 passwd = getpass.getpass('Enter Password : ')
-bot.login(username = user[1], password = passwd)
+bot.login(username = user, password = passwd)
 
 
 from PIL import Image
